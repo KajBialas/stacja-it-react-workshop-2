@@ -10,7 +10,13 @@ class Comments extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
+    this.setState({
+      comments: [...this.state.comments, this.state.currentValue],
+      currentValue: '',
+    })
   }
+
+  renderComments = () => this.state.comments.map((comment, index) => <div key={index}>{comment}</div>);
 
   render() {
     return (
@@ -20,6 +26,8 @@ class Comments extends Component {
           <input type="text" value={this.state.currentValue} onChange={this.handleChange} />
           <button type="submit">Dodaj komentarz</button>
         </form>
+        <h3>Lista komentarzy</h3>
+        {this.renderComments()}
       </div>
     )
   }
