@@ -7,6 +7,7 @@ import { BrowserRouter, Switch, Route} from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Page404 from './pages/Page404';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,6 +17,7 @@ ReactDOM.render(
         <Route exact path="/" component={Home} />
         <Route exact path="/about" component={About} />
         <Route exact path="/contact" component={Contact} />
+        <Route component={Page404} />
       </Switch>
       <Footer />
     </BrowserRouter>
