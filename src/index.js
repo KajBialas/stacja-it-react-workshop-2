@@ -1,11 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import { BrowserRouter, Switch, Route} from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Header title="Nagłowek aplikacji" subtitle="Warsztat Stacja IT" />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/contact" component={Contact} />
+      </Switch>
+      <Footer />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
