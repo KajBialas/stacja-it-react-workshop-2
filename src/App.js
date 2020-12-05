@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import TextSection from './components/TextSection';
+import Counter from './components/Counter';
 
 const HOME_TEXTS = {
   HEADER: {
@@ -22,6 +23,7 @@ function App() {
   return (
     <div>
       <Header title={HOME_TEXTS.HEADER.TITLE} subtitle={HOME_TEXTS.HEADER.SUBTITLE} />
+      <Counter />
       <TextSection title={HOME_TEXTS.TEXT_SECTION1.TITLE} text={HOME_TEXTS.TEXT_SECTION1.TEXT} />
       <TextSection title={HOME_TEXTS.TEXT_SECTION2.TITLE} text={HOME_TEXTS.TEXT_SECTION2.TEXT} />
       <Footer />
