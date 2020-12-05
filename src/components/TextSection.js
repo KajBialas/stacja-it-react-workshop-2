@@ -1,24 +1,16 @@
 import React, { Component } from 'react';
 
-const TEXT_SECTION_TEXT = 'Treść aplikacji';
 
 class TextSection extends Component {
-  textSectionHeader = 'Sekcja tekstowa';
-
-  handleClick = (value) => console.log(value);
-
   render() {
     return (
       <div>
         <h3>
-          {this.textSectionHeader}
+          {this.props.title}
         </h3>
         <p>
-          { TEXT_SECTION_TEXT }
+          { this.props.text }
         </p>
-        <button onClick={() => this.handleClick(10)}>
-          console.log
-        </button>
       </div>
     )
   }
