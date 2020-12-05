@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import TextSection from './components/TextSection';
 import Counter from './components/Counter';
 import PostDetails from './components/PostDetails';
+import PostList from './components/PostList';
 
 const HOME_TEXTS = {
   HEADER: {
@@ -25,6 +26,7 @@ function App() {
     <div>
       <Header title={HOME_TEXTS.HEADER.TITLE} subtitle={HOME_TEXTS.HEADER.SUBTITLE} />
       <PostDetails />
+      <PostList />
       <Counter />
       <TextSection title={HOME_TEXTS.TEXT_SECTION1.TITLE} text={HOME_TEXTS.TEXT_SECTION1.TEXT} />
       <TextSection title={HOME_TEXTS.TEXT_SECTION2.TITLE} text={HOME_TEXTS.TEXT_SECTION2.TEXT} />
