@@ -1,17 +1,14 @@
 import React from 'react';
 
-const HEADER_TEXT = 'Aplikacja React';
 
-function Header() {
-  const additionalHeaderText = 'Warsztat StacjaIT'
-
+function Header(props) {
   return (
     <header>
       <h1>
-        {HEADER_TEXT}
+        {props.title}
       </h1>
       <h2>
-        {additionalHeaderText}
+        {props.subtitle}
       </h2>
     </header>
   )
