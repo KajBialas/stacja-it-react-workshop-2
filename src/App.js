@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import TextSection from './components/TextSection';
 import Counter from './components/Counter';
+import PostDetails from './components/PostDetails';
 
 const HOME_TEXTS = {
   HEADER: {
@@ -23,6 +24,7 @@ function App() {
   return (
     <div>
       <Header title={HOME_TEXTS.HEADER.TITLE} subtitle={HOME_TEXTS.HEADER.SUBTITLE} />
+      <PostDetails />
       <Counter />
       <TextSection title={HOME_TEXTS.TEXT_SECTION1.TITLE} text={HOME_TEXTS.TEXT_SECTION1.TEXT} />
       <TextSection title={HOME_TEXTS.TEXT_SECTION2.TITLE} text={HOME_TEXTS.TEXT_SECTION2.TEXT} />

@@ -23,7 +23,16 @@ class Counter extends Component {
   handleReset = () => this.setState({counter: COUNTER_INIT_VALUE});
   // handleIncrement = () => this.setState(prevState => ({counter: prevState.counter + 1}));
 
+  componentDidMount() {
+    console.log('did mount')
+  }
+
+  componentDidUpdate() {
+    console.log('did update');
+  }
+
   render() {
+    console.log('render');
     return (
       <div>
         <TextSection title={COUNTER_TEXTS.TITLE} text={this.state.counter} />
