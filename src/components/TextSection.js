@@ -5,6 +5,8 @@ const TEXT_SECTION_TEXT = 'Treść aplikacji';
 class TextSection extends Component {
   textSectionHeader = 'Sekcja tekstowa';
 
+  handleClick = (value) => console.log(value);
+
   render() {
     return (
       <div>
@@ -14,6 +16,9 @@ class TextSection extends Component {
         <p>
           { TEXT_SECTION_TEXT }
         </p>
+        <button onClick={() => this.handleClick(10)}>
+          console.log
+        </button>
       </div>
     )
   }
